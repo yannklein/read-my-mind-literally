@@ -14,8 +14,12 @@
       <p class="verse-2"><%= @message.verse_2 %>"</p>
     </div>
     <div class="footer">
-      <p>An attempt to throw the weight of tough days into some poetic ways. More intimate code-art relationships on <a href="https://www.yannklein.me">my portfolio</a>.</p>
+      <p>An attempt to throw the weight of tough days in some poetic ways. More intimate code-art relationships on <a href="https://www.yannklein.me">my portfolio</a>.</p>
     </div>
   </div>
+  <script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  </script>
 </body>
 </html>
