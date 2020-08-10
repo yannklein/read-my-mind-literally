@@ -3,6 +3,7 @@
 body {
   font-family: 'EB Garamond', serif;
   color: rgb(40,40,40);
+  background-color: rgb(253,253,253);
   margin: 0;
   height: 100vh;
 }
@@ -15,24 +16,54 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   height: 100%;
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
 }
 
-.message {
-}
-
 .message p {
-  font-size: 64px;
+  font-size: 48px;
 }
 
 .message .verse-2 {
-  margin-left: 64px;
+  text-align: right;
 }
 
 .footer {
   text-align: center;
   font-weight: lighter;
   margin-bottom: 8px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 700px;
+  }
+  .message p {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 500px;
+  }
+  .message p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 16px;
+  }
+  .message {
+    width: 300px;
+  }
+  .message p {
+    font-size: 20px;
+    display: inline;
+  }
 }
