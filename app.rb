@@ -7,10 +7,10 @@ require 'pry'
 get '/' do
   @message = Message.last
   # binding.pry
-  @message = {
+  @message = Message.new(
     verse_1: 'Que toujours, dans vos vers, le sens coupant les mots',
     verse_2: "Suspende l'hémistiche, en marque le repos."
-  } if @message.nil?
+  ) if @message.nil?
   erb :message
 end
 
@@ -24,10 +24,10 @@ get '/:id' do
   rescue ActiveRecord::RecordNotFound => e
     @message = nil
   end
-  @message = {
+  @message = Message.new(
     verse_1: 'Que toujours, dans vos vers, le sens coupant les mots',
     verse_2: "Suspende l'hémistiche, en marque le repos."
-  } if @message.nil?
+  ) if @message.nil?
   erb :message
 end
 
