@@ -32,5 +32,6 @@ get '/:id' do
 end
 
 post '/write-my-mind' do
- Message.create(verse_1: params["verse_1"], verse_2: params["verse_2"])
+  Message.create(verse_1: params["verse_1"], verse_2: params["verse_2"])
+  redirect '/'
 end
