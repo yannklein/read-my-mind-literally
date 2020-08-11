@@ -5,13 +5,8 @@ require 'sinatra/activerecord'
 require 'pry'
 
 get '/' do
-  @message = nil
-  # binding.pry
-  @message = Message.new(
-    verse_1: 'Que toujours, dans vos vers, le sens coupant les mots',
-    verse_2: "Suspende l'hémistiche, en marque le repos."
-  ) if @message.nil?
-  erb :message
+  last_id = Message.last.id
+  redirect "/#{last_id}"
 end
 
 get '/write-my-mind' do
