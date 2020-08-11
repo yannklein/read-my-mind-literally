@@ -13,22 +13,34 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  width: 1000px;
+  width: 800px;
   margin: 0 auto;
 }
 
-.message p {
-  font-size: 48px;
+.hidden-button {
+  opacity: 0;
+  color: white;
+}
+
+.message {
+  font-size: 32px;
+  opacity: 1;
+  width: 80%;
+  height: 3em;
 }
 
 .message .verse-2 {
-  text-align: right;
+  margin-left: 5em;
 }
 
 .footer {
@@ -43,6 +55,7 @@ p {
   }
   .message p {
     font-size: 32px;
+    width: 100%;
   }
 }
 
@@ -62,12 +75,18 @@ p {
   .message {
     width: 300px;
   }
+
+  .message .verse-2 {
+      margin-left: 0;
+  }
+
   .message p {
-    font-size: 20px;
+    font-size: 24px;
     display: inline;
   }
 
   .footer {
     text-align: justify;
+    font-size: 14px;
   }
 }

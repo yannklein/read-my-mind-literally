@@ -5,7 +5,7 @@ require 'sinatra/activerecord'
 require 'pry'
 
 get '/' do
-  @message = Message.last
+  @message = nil
   # binding.pry
   @message = Message.new(
     verse_1: 'Que toujours, dans vos vers, le sens coupant les mots',
