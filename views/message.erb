@@ -10,8 +10,8 @@
   <div class="container">
     <a href="/write-my-mind" class="hidden-button">Write a new message</a>
     <div class="message">
-      <p class="verse-1"></p>
-      <p class="verse-2"></p>
+      <p class="verse-1">"<%= @message.verse_1 %></p>
+      <p class="verse-2"><%= @message.verse_2 %>"</p>
     </div>
     <div class="footer">
       <p>An attempt to throw the weight of tough days in some poetic ways. More intimate code-art relationships on <a href="https://www.yannklein.me">my portfolio</a>.</p>
@@ -21,11 +21,18 @@
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+    const messageElmt = document.querySelector(".message");
     const verse1Elmt = document.querySelector(".verse-1");
     const verse2Elmt = document.querySelector(".verse-2");
 
     const verse1 = "\"<%= @message.verse_1 %>";
     const verse2 = "<%= @message.verse_2 %>\"";
+
+    const fullMessageHeight = messageElmt.offsetHeight;
+    verse1Elmt.innerHTML = "";
+    verse2Elmt.innerHTML = "";
+    messageElmt.style.opacity = 1;
+    messageElmt.style.height = `${fullMessageHeight}px`;
 
     verse1.split('').forEach((letter, index) => {
       setTimeout(() => {

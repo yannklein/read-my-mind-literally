@@ -34,13 +34,13 @@ a {
 
 .message {
   font-size: 32px;
-  opacity: 1;
+  opacity: 0;
   width: 100%;
-  height: 3em;
 }
 
 .message .verse-2 {
-  margin-left: 5em;
+  /*margin-left: 5em;*/
+  /*text-align: right;*/
 }
 
 .footer {
