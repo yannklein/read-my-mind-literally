@@ -19,8 +19,8 @@
   </div>
   <script>
     // Adapt VH for mobiles
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // let vh = window.innerHeight * 0.01;
+    // document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     // Code for typed message
 
@@ -35,22 +35,24 @@
 
     // Keep message element height and then remove the text inside each verse
     const fullMessageHeight = messageElmt.offsetHeight;
-    verse1Elmt.innerHTML = "";
-    verse2Elmt.innerHTML = "";
+    // verse1Elmt.innerHTML = "";
+    // verse2Elmt.innerHTML = "";
     messageElmt.style.opacity = 1;
+
     messageElmt.style.height = `${fullMessageHeight}px`;
+    // console.log(fullMessageHeight, messageElmt.offsetHeight);
 
     // Rewrite the verse with a typing effect
-    verse1.split('').forEach((letter, index) => {
-      setTimeout(() => {
-        verse1Elmt.innerHTML = `${verse1Elmt.innerHTML}${letter}`;
-      }, 50 * index);
-    });
-    verse2.split('').forEach((letter, index) => {
-      setTimeout(() => {
-        verse2Elmt.innerHTML = `${verse2Elmt.innerHTML}${letter}`;
-      }, 3000 + 50 * index);
-    });
+    // verse1.split('').forEach((letter, index) => {
+    //   setTimeout(() => {
+    //     verse1Elmt.innerHTML = `${verse1Elmt.innerHTML}${letter}`;
+    //   }, 50 * index);
+    // });
+    // verse2.split('').forEach((letter, index) => {
+    //   setTimeout(() => {
+    //     verse2Elmt.innerHTML = `${verse2Elmt.innerHTML}${letter}`;
+    //   }, 3000 + 50 * index);
+    // });
   </script>
 </body>
 </html>
