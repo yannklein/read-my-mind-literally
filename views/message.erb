@@ -35,8 +35,7 @@
     verse2Elmt.innerHTML = "";
     messageElmt.style.opacity = 1;
 
-    // *0.14 is a magic number, the message height before/after loading deosn't match for some reasons..
-    messageElmt.style.height = `${fullMessageHeight + fullMessageHeight*0.14}px`;
+    messageElmt.style.height = `${fullMessageHeight}px`;
     console.log(fullMessageHeight, messageElmt.offsetHeight);
 
     // Rewrite the verse with a typing effect
