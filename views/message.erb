@@ -18,22 +18,29 @@
     </div>
   </div>
   <script>
+    // Adapt VH for mobiles
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+    // Code for typed message
+
+    // Select the different elements
     const messageElmt = document.querySelector(".message");
     const verse1Elmt = document.querySelector(".verse-1");
     const verse2Elmt = document.querySelector(".verse-2");
 
+    // Store message from DB
     const verse1 = "\"<%= @message.verse_1 %>";
     const verse2 = "<%= @message.verse_2 %>\"";
 
+    // Keep message element height and then remove the text inside each verse
     const fullMessageHeight = messageElmt.offsetHeight;
     verse1Elmt.innerHTML = "";
     verse2Elmt.innerHTML = "";
     messageElmt.style.opacity = 1;
     messageElmt.style.height = `${fullMessageHeight}px`;
 
+    // Rewrite the verse with a typing effect
     verse1.split('').forEach((letter, index) => {
       setTimeout(() => {
         verse1Elmt.innerHTML = `${verse1Elmt.innerHTML}${letter}`;
@@ -45,6 +52,5 @@
       }, 3000 + 50 * index);
     });
   </script>
-
 </body>
 </html>
